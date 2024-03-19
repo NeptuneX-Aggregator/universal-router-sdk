@@ -158,17 +158,17 @@ const CHAIN_CONFIGS: { [key: number]: ChainConfig } = {
 }
 
 export const UNIVERSAL_ROUTER_ADDRESS = (chainId: number): string => {
-  if (!(chainId in CHAIN_CONFIGS)) throw new Error(`Universal Router not deployed on chain ${chainId}`)
+  if (!(chainId in CHAIN_CONFIGS)) throw new Error(`Universal Router is not deployed on chain ${chainId}`)
   return CHAIN_CONFIGS[chainId].router
 }
 
 export const UNIVERSAL_ROUTER_CREATION_BLOCK = (chainId: number): number => {
-  if (!(chainId in CHAIN_CONFIGS)) throw new Error(`Universal Router not deployed on chain ${chainId}`)
+  if (!(chainId in CHAIN_CONFIGS)) throw new Error(`Universal Router is not deployed on chain ${chainId}`)
   return CHAIN_CONFIGS[chainId].creationBlock
 }
 
 export const WETH_ADDRESS = (chainId: number): string => {
-  if (!(chainId in CHAIN_CONFIGS)) throw new Error(`Universal Router not deployed on chain ${chainId}`)
+  if (!(chainId in CHAIN_CONFIGS)) throw new Error(`Universal Router is not deployed on chain ${chainId}`)
 
   if (CHAIN_CONFIGS[chainId].weth == NOT_SUPPORTED_ON_CHAIN) throw new Error(`Chain ${chainId} does not have WETH`)
 
@@ -176,7 +176,7 @@ export const WETH_ADDRESS = (chainId: number): string => {
 }
 
 export const STETH_ADDRESS = (chainId: number): string => {
-  if (!(chainId in CHAIN_CONFIGS)) throw new Error(`Universal Router not deployed on chain ${chainId}`)
+  if (!(chainId in CHAIN_CONFIGS)) throw new Error(`Universal Router is not deployed on chain ${chainId}`)
 
   if (CHAIN_CONFIGS[chainId].steth == NOT_SUPPORTED_ON_CHAIN)
     throw new Error(`Chain ${chainId} does not have STETH support`)
@@ -185,7 +185,7 @@ export const STETH_ADDRESS = (chainId: number): string => {
 }
 
 export const WSTETH_ADDRESS = (chainId: number): string => {
-  if (!(chainId in CHAIN_CONFIGS)) throw new Error(`Universal Router not deployed on chain ${chainId}`)
+  if (!(chainId in CHAIN_CONFIGS)) throw new Error(`Universal Router is not deployed on chain ${chainId}`)
 
   if (CHAIN_CONFIGS[chainId].wsteth == NOT_SUPPORTED_ON_CHAIN)
     throw new Error(`Chain ${chainId} does not have WSTETH support`)
